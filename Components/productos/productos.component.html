@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <h2>Productos</h2>
+  <div class="row">
+    <div class="carousel-container">
+      <carousel>
+        <slide>
+          <img src="assets/Productos/MezcalChamoy.jpg" alt="first slide" class="carousel-image">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Chamoy</h3>
+            <button class="btn btn-primary" (click)="openModal(template, 'Chamoy', 'Nulla vitae elit libero, a pharetra augue mollis interdum.')">Ver Descripcion</button>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+        </slide>
+        <slide>
+          <img src="assets/Productos/MezcalPinia.jpg" alt="second slide" class="carousel-image">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Piña</h3>
+            <button class="btn btn-primary" (click)="openModal(template, 'Piña', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">Ver Descripcion</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </slide>
+        <slide>
+          <img src="assets/Productos/MezcalTamarindo.jpg" alt="third slide" class="carousel-image">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Tamarindo</h3>
+            <button class="btn btn-primary" (click)="openModal(template, 'Tamarindo', 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.')">Ver Descripcion</button>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{ NameProducto }}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    {{ DesProducto }}
+  </div>
+</ng-template>

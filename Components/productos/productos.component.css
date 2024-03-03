@@ -1,0 +1,10 @@
+.carousel-container {
+  max-width: 600px;
+  max-height: 600px; /* Establece un ancho fijo para el carrusel */
+  margin: 0 auto; /* Centra el carrusel horizontalmente */
+}
+
+.carousel-image {
+  width: 100%; /* Ajusta el ancho de la imagen al tamaño del carrusel */
+  height: auto; /* Mantiene la relación de aspecto */
+}
